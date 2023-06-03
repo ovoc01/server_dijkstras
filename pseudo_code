@@ -1,0 +1,12 @@
+Algorithme Dijkstra(Graph G, Sommet source):
+    Créer un tableau de distances pour stocker la distance minimale de la source à chaque sommet du graphe
+    Initialiser toutes les distances à une valeur infinie, sauf la distance de la source qui est de 0
+    Créer un tableau de sommets visités pour suivre les sommets déjà traités
+    Tant que tous les sommets n'ont pas été visités:
+        Sélectionner le sommet non visité avec la distance minimale (appelons-le sommet_actuel)
+        Marquer le sommet_actuel comme visité
+        Pour chaque voisin v du sommet_actuel:
+            Calculer la distance temporaire temp_dist en ajoutant la distance du sommet_actuel à v à la distance du sommet_actuel
+            Si temp_dist est inférieure à la distance enregistrée pour v:
+                Mettre à jour la distance de v avec temp_dist
+    Retourner le tableau de distances
